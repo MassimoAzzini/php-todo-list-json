@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Prendere antibiotico",
+    "done": false
+  },
+
+  {
+    "title": "Fare aereosol",
+    "done": false
+  },
+
+  {
+    "title": "Prendere i fermenti lattici",
+    "done": true
+  }
+]
