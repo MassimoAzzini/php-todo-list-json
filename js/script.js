@@ -9,8 +9,6 @@ createApp({
       newTask: '',
       message: false
     }
-      
-    
   },
 
   methods: {
