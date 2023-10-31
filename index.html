@@ -41,7 +41,7 @@
         </div>
 
         <div class="cont-message">
-          <p :class="{'d-none': !this.message}" class="text-danger">Attenzione!! Devi completare il task prima di eliminarlo!</p>
+          <p :class="{'d-none': !message}" class="text-danger">Attenzione!! Devi completare il task prima di eliminarlo!</p>
         </div>
 
         <div class="cont-task">
@@ -59,7 +59,7 @@
   
             </li>
           </ul>
-          <h3 v-else>Non ci sono task</h3>
+          <h3 class="text-center" v-else>NON CI SONO TASK, PUOI ANDARE A CASA!</h3>
         </div>
         
       </div>
