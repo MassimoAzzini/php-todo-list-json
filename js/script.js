@@ -41,10 +41,21 @@ createApp({
           .then(result => {
             this.list = result.data;
           })
+
       }else{
         this.message = true;
         setTimeout( () => this.message = false, 2000)
       }
+    },
+
+    toggleDone(index){
+      const data = new FormData();
+      data.append('toggleIndexTask', index);
+
+      axios.post(this.apiUrl, data)
+        .then(result => {
+          this.list = result.data;
+        })
     }
     
   },
