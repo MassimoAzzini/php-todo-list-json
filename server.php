@@ -15,7 +15,6 @@ if(isset($_POST['taskTitle'])){
     'isDone' => false
   ];
   
-  file_put_contents('todo-list.json', json_encode($list));
 };
 
 // REMOVE TASK
@@ -23,7 +22,6 @@ if(isset($_POST['taskIndexDelate'])){
   $indexTask = $_POST['taskIndexDelate'];
   array_splice($list,$indexTask,1);
 
-  file_put_contents('todo-list.json', json_encode($list));
 }
 
 // TOGGLE isDone TASK
@@ -31,9 +29,9 @@ if(isset($_POST['toggleIndexTask'])){
   $indexTaskToggle = $_POST['toggleIndexTask'];
   $list[$indexTaskToggle]['isDone'] = !$list[$indexTaskToggle]['isDone'];
 
-  file_put_contents('todo-list.json', json_encode($list));
 }
 
+file_put_contents('todo-list.json', json_encode($list));
 
 echo json_encode($list);
 
