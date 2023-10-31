@@ -6,3 +6,11 @@ li:hover{
   background-color: lightgrey;
 }
 
+li.done {
+  text-decoration: line-through;
+}
+
+.cont-message {
+  height: 40px;
+}
+

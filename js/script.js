@@ -7,6 +7,7 @@ createApp({
       apiUrl: 'server.php',
       list: [],
       newTask: '',
+      message: false
     }
       
     
@@ -34,13 +35,18 @@ createApp({
     },
 
     deleteTask(index){
-      const data = new FormData();
-      data.append('taskIndexDelate', index);
-
-      axios.post(this.apiUrl, data)
-        .then(result => {
-          this.list = result.data;
-        })
+      if(this.list[index].isDone){
+        const data = new FormData();
+        data.append('taskIndexDelate', index);
+  
+        axios.post(this.apiUrl, data)
+          .then(result => {
+            this.list = result.data;
+          })
+      }else{
+        this.message = true;
+        setTimeout( () => this.message = false, 2000)
+      }
     }
     
   },
