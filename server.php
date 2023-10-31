@@ -7,11 +7,11 @@ $list = json_decode($json_string,true);
 header('Content-Type: application/json');
 
 
-if(isset($_POST['taskObj'])){
-  $newItem = $_POST['taskObj'];
+if(isset($_POST['taskTitle'])){
+  $newTitleTask = $_POST['taskTitle'];
 
   $list[] = [
-    'title' => $newItem,
+    'title' => $newTitleTask,
     'isDone' => false
   ];
   
